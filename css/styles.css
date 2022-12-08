@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    font-family: "Muli", sans-serif;
+    background-color: rgb(153, 24, 217);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.box {
+    background-color: #08365c;
+    color: #d5c3c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 12.5rem;
+    margin: 0.6rem;
+    border-radius: 10px;
+    border: 2px solid rgba(211, 189, 189, 0.516);
+    box-shadow: 2px 4px 5px rgba(80, 2, 113, 0.3);
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-last-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    transform: translateX(0);
+}
+
+.textBox {
+    font-size: 1.8rem;
+}
+
+.teste {
+    background-color: #222123;
+
+}
+
+.text {
+    margin: 10px;
+    color: #ceb2e9;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 85%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 100%;
+        width: 125%;
+    }
+}
+/* Reference link about animation
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#:~:text=Anima%C3%A7%C3%B5es%20CSS%20tornam%20poss%C3%ADvel%20animar%20transi%C3%A7%C3%B5es%20de%20um,como%20poss%C3%ADveis%20waypoints%20intermedi%C3%A1rios%20ao%20longo%20do%20caminho.
+
+*/
